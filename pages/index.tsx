@@ -1,9 +1,18 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Header from '../components/Header'
 
 const Home: NextPage = () => {
-  return <h1>hello world</h1>
+  return (
+    <div>
+      <Head>
+        <title>Medium 2.0</title>
+        <link rel="icon" href="/Medium.svg" />
+      </Head>
+      <Header />
+    </div>
+  )
 }
 
 export default Home
