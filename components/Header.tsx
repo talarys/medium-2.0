@@ -4,7 +4,7 @@ import Link from 'next/link'
 function Header() {
   return (
     <div className="bg-[#FFC017]">
-      <div className=" font-semibold flex justify-between py-4 px-14 max-w-7xl  mx-auto ">
+      <div className=" font-semibold flex justify-between py-4  px-4 md:px-14 max-w-7xl  mx-auto ">
         {/* Left Side */}
         <div className="flex items-center">
           {/* Logo Link */}
@@ -23,7 +23,7 @@ function Header() {
         </div>
         {/* Right Side */}
         <div className="flex items-center space-x-4">
-          <h3 className="cursor-pointer">Sign In</h3>
+          <h3 className="hidden sm:flex cursor-pointer">Sign In</h3>
           <h3 className="rounded-full px-3 py-2 bg-black text-white hover:bg-white hover:text-black cursor-pointer">
             Get Started
           </h3>
