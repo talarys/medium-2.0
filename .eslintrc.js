@@ -1,11 +1,13 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    node: true,
+    es2022: true,
   },
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'next/core-web-vitals',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -20,5 +22,9 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'import/extensions': 'off',
+    'react/jsx-filename-extension': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/function-component-definition': 'off',
   },
 };
