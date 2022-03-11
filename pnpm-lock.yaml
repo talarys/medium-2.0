@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@next/eslint-plugin-next': ^12.1.0
   '@types/node': 17.0.4
   '@types/react': 17.0.38
   '@typescript-eslint/eslint-plugin': ^5.14.0
@@ -8,6 +9,7 @@ specifiers:
   autoprefixer: ^10.4.0
   eslint: ^8.2.0
   eslint-config-airbnb: ^19.0.4
+  eslint-config-next: ^12.1.0
   eslint-plugin-import: ^2.25.3
   eslint-plugin-jsx-a11y: ^6.5.1
   eslint-plugin-react: ^7.28.0
@@ -23,10 +25,12 @@ specifiers:
   typescript: 4.5.4
 
 dependencies:
+  '@next/eslint-plugin-next': 12.1.0
   '@typescript-eslint/eslint-plugin': 5.14.0_1a7af80357bfde44f1971af215d01731
   '@typescript-eslint/parser': 5.14.0_eslint@8.10.0+typescript@4.5.4
   eslint: 8.10.0
   eslint-config-airbnb: 19.0.4_c7d04ecf5eaa64250a4220a14895c52e
+  eslint-config-next: 12.1.0_01ac3c4e6b8d5746e32dfe5cc29a613b
   eslint-plugin-import: 2.25.4_eslint@8.10.0
   eslint-plugin-jsx-a11y: 6.5.1_eslint@8.10.0
   eslint-plugin-react: 7.29.3_eslint@8.10.0
@@ -118,6 +122,12 @@ packages:
 
   /@next/env/12.1.0:
     resolution: {integrity: sha512-nrIgY6t17FQ9xxwH3jj0a6EOiQ/WDHUos35Hghtr+SWN/ntHIQ7UpuvSi0vaLzZVHQWaDupKI+liO5vANcDeTQ==}
+    dev: false
+
+  /@next/eslint-plugin-next/12.1.0:
+    resolution: {integrity: sha512-WFiyvSM2G5cQmh32t/SiQuJ+I2O+FHVlK/RFw5b1565O2kEM/36EXncjt88Pa+X5oSc+1SS+tWxowWJd1lqI+g==}
+    dependencies:
+      glob: 7.1.7
     dev: false
 
   /@next/swc-android-arm64/12.1.0:
@@ -236,6 +246,10 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
+
+  /@rushstack/eslint-patch/1.1.0:
+    resolution: {integrity: sha512-JLo+Y592QzIE+q7Dl2pMUtt4q8SKYI5jDrZxrozEQxnGVOyYE+GWK9eLkwTaeN9DDctlaRAQ3TBmzZ1qdLE30A==}
+    dev: false
 
   /@sanity/client/3.2.0:
     resolution: {integrity: sha512-qhjyscSwpm8bZ7L6tezIJ0eAYSMUvSILt09NsayPhGIvPynraAKNgArI950/orVYylI8a8NQ1yOzuo0prWsO5A==}
@@ -945,11 +959,55 @@ packages:
       object.entries: 1.1.5
     dev: false
 
+  /eslint-config-next/12.1.0_01ac3c4e6b8d5746e32dfe5cc29a613b:
+    resolution: {integrity: sha512-tBhuUgoDITcdcM7xFvensi9I5WTI4dnvH4ETGRg1U8ZKpXrZsWQFdOKIDzR3RLP5HR3xXrLviaMM4c3zVoE/pA==}
+    peerDependencies:
+      eslint: ^7.23.0 || ^8.0.0
+      next: '>=10.2.0'
+      typescript: '>=3.3.1'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@next/eslint-plugin-next': 12.1.0
+      '@rushstack/eslint-patch': 1.1.0
+      '@typescript-eslint/parser': 5.14.0_eslint@8.10.0+typescript@4.5.4
+      eslint: 8.10.0
+      eslint-import-resolver-node: 0.3.6
+      eslint-import-resolver-typescript: 2.5.0_8b406960a2a06af75ddac353adbd0cfd
+      eslint-plugin-import: 2.25.4_eslint@8.10.0
+      eslint-plugin-jsx-a11y: 6.5.1_eslint@8.10.0
+      eslint-plugin-react: 7.29.3_eslint@8.10.0
+      eslint-plugin-react-hooks: 4.3.0_eslint@8.10.0
+      next: 12.1.0_react-dom@17.0.2+react@17.0.2
+      typescript: 4.5.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /eslint-import-resolver-node/0.3.6:
     resolution: {integrity: sha512-0En0w03NRVMn9Uiyn8YRPDKvWjxCWkslUEhGNTdGx15RvPJYQ+lbOlqrlNI2vEAs4pDYK4f/HN2TbDmk5TP0iw==}
     dependencies:
       debug: 3.2.7
       resolve: 1.22.0
+    dev: false
+
+  /eslint-import-resolver-typescript/2.5.0_8b406960a2a06af75ddac353adbd0cfd:
+    resolution: {integrity: sha512-qZ6e5CFr+I7K4VVhQu3M/9xGv9/YmwsEXrsm3nimw8vWaVHRDrQRp26BgCypTxBp3vUp4o5aVEJRiy0F2DFddQ==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      eslint: '*'
+      eslint-plugin-import: '*'
+    dependencies:
+      debug: 4.3.3
+      eslint: 8.10.0
+      eslint-plugin-import: 2.25.4_eslint@8.10.0
+      glob: 7.2.0
+      is-glob: 4.0.3
+      resolve: 1.22.0
+      tsconfig-paths: 3.13.0
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /eslint-module-utils/2.7.3:
@@ -1320,6 +1378,17 @@ packages:
     engines: {node: '>=10.13.0'}
     dependencies:
       is-glob: 4.0.3
+
+  /glob/7.1.7:
+    resolution: {integrity: sha512-OvD9ENzPLbegENnYP5UUfJIirTg4+XwMWGaQfQTY0JenxNvvIKP3U3/tAQSPIu/lHxXYSZmpXlUHeqAIdKzBLQ==}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 3.1.2
+      once: 1.4.0
+      path-is-absolute: 1.0.1
+    dev: false
 
   /glob/7.2.0:
     resolution: {integrity: sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==}
