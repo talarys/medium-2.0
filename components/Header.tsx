@@ -1,5 +1,4 @@
-import React from 'react'
-import Link from 'next/link'
+import Link from 'next/link';
 
 function Header() {
   return (
@@ -8,7 +7,7 @@ function Header() {
         {/* Left Side */}
         <div className="flex items-center">
           {/* Logo Link */}
-          <Link href="/">
+          <Link href="/" passHref>
             <img
               className="mr-8 w-44 object-contain cursor-pointer"
               src="/MediumLogo.svg"
@@ -30,7 +29,7 @@ function Header() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;

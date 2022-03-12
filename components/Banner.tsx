@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Banner() {
   return (
     <div className="bg-[#FFC017] border-t border-b border-black h-[455px]">
@@ -11,7 +9,7 @@ function Banner() {
         </h3>
       </div>
     </div>
-  )
+  );
 }
 
-export default Banner
+export default Banner;

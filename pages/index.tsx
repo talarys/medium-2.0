@@ -1,10 +1,9 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { sanityClient } from '../sanity'
-import Banner from '../components/Banner'
-import Header from '../components/Header'
-import Link from 'next/link'
-import Posts from '../components/Posts'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { sanityClient } from '../sanity';
+import Banner from '../components/Banner';
+import Header from '../components/Header';
+import Posts from '../components/Posts';
 
 const Home: NextPage = ({ posts }) => (
   <div>
@@ -16,9 +15,9 @@ const Home: NextPage = ({ posts }) => (
     <Banner />
     <Posts posts={posts} />
   </div>
-)
+);
 
-export default Home
+export default Home;
 
 export const getServerSideProps = async () => {
   const query = /* groq */ `*[_type=="post"]{
@@ -31,9 +30,9 @@ export const getServerSideProps = async () => {
     description,
     mainImage,
     slug
-  }`
+  }`;
 
-  const posts = await sanityClient.fetch(query)
+  const posts = await sanityClient.fetch(query);
 
-  return { props: { posts } }
-}
+  return { props: { posts } };
+};

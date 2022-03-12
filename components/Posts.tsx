@@ -1,7 +1,12 @@
-import Link from 'next/link'
-import { sanityClient, urlFor } from '../sanity'
+import Link from 'next/link';
+import { urlFor } from '../sanity';
+import type { Post } from '../typings';
 
-function Posts({ posts }) {
+interface Props{
+  posts:[Post]
+}
+
+function Posts({ posts }: Props) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-5 cursor-pointer">
       {posts.map((post) => (
@@ -23,7 +28,7 @@ function Posts({ posts }) {
         </Link>
       ))}
     </div>
-  )
+  );
 }
 
-export default Posts
+export default Posts;
