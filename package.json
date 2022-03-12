@@ -10,6 +10,7 @@
     "@icons-pack/react-simple-icons": "^4.6.1",
     "@portabletext/react": "^1.0.4",
     "@sanity/image-url": "^1.0.1",
+    "@tailwindcss/forms": "^0.5.0",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.0.0",
     "eslint": "^7.32.0",

@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -6,5 +7,8 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require('tailwind-scrollbar-hide')],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+    require('@tailwindcss/forms'),
+  ],
 };
