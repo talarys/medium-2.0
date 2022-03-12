@@ -11,7 +11,7 @@ function Footer() {
         <Instagram className="cursor-pointer" />
         <Rss className="cursor-pointer" />
       </div>
-      <div className="flex items-center justify-center space-x-6">
+      <div className="flex flex-wrap items-center justify-center space-x-6 ">
         <p className="cursor-pointer">Sitemap</p>
         <p className="cursor-pointer">About</p>
         <p className="cursor-pointer">Store</p>
