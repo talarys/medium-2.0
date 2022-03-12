@@ -7,6 +7,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^4.6.1",
     "@portabletext/react": "^1.0.4",
     "@sanity/image-url": "^1.0.1",
     "@typescript-eslint/eslint-plugin": "^5.14.0",

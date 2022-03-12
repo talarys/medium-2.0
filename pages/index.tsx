@@ -4,9 +4,10 @@ import { sanityClient } from '../sanity';
 import Banner from '../components/Banner';
 import Header from '../components/Header';
 import Posts from '../components/Posts';
+import Footer from '../components/Footer';
 
 const Home: NextPage = ({ posts }) => (
-  <div>
+  <div className="flex flex-col h-screen m-0">
     <Head>
       <title>Medium 2.0</title>
       <link rel="icon" href="/Medium.svg" />
@@ -14,6 +15,7 @@ const Home: NextPage = ({ posts }) => (
     <Header />
     <Banner />
     <Posts posts={posts} />
+    <Footer />
   </div>
 );
 

@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@icons-pack/react-simple-icons': ^4.6.1
   '@portabletext/react': ^1.0.4
   '@sanity/image-url': ^1.0.1
   '@types/node': 17.0.4
@@ -27,6 +28,7 @@ specifiers:
   typescript: 4.5.4
 
 dependencies:
+  '@icons-pack/react-simple-icons': 4.6.1_react@17.0.2
   '@portabletext/react': 1.0.4_react@17.0.2
   '@sanity/image-url': 1.0.1
   '@typescript-eslint/eslint-plugin': 5.14.0_84a60f7ca14a470fa34156b713fcd5c2
@@ -126,6 +128,15 @@ packages:
 
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    dev: false
+
+  /@icons-pack/react-simple-icons/4.6.1_react@17.0.2:
+    resolution: {integrity: sha512-ICONbofFzeTkXvmbnptDv4P9cqtW/N/8EFOqyzJQJ80b8fJoLzqhM7EKslBmWziIwjY9FBnOoL2ofzQOoDG1Gg==}
+    peerDependencies:
+      react: ^16.13 || ^17
+    dependencies:
+      prop-types: 15.8.1
+      react: 17.0.2
     dev: false
 
   /@next/env/12.1.0:
