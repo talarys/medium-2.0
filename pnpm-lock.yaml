@@ -1,15 +1,20 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@portabletext/react': ^1.0.4
   '@sanity/image-url': ^1.0.1
   '@types/node': 17.0.4
   '@types/react': 17.0.38
   '@typescript-eslint/eslint-plugin': ^5.14.0
+  '@typescript-eslint/parser': ^5.0.0
   autoprefixer: ^10.4.0
   eslint: ^7.32.0
   eslint-config-airbnb: ^19.0.4
   eslint-config-next: ^12.1.0
+  eslint-plugin-import: '>=2.25.3 <3.0.0'
+  eslint-plugin-jsx-a11y: ^6.5.1
   eslint-plugin-react: ^7.28.0
+  eslint-plugin-react-hooks: ^4.3.0
   next: latest
   next-sanity: ^0.5.1
   postcss: ^8.4.5
@@ -17,20 +22,27 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.1.1
   react: ^17.0.2
   react-dom: ^17.0.2
+  tailwind-scrollbar-hide: ^1.1.7
   tailwindcss: ^3.0.7
   typescript: 4.5.4
 
 dependencies:
+  '@portabletext/react': 1.0.4_react@17.0.2
   '@sanity/image-url': 1.0.1
-  '@typescript-eslint/eslint-plugin': 5.14.0_eslint@7.32.0+typescript@4.5.4
+  '@typescript-eslint/eslint-plugin': 5.14.0_84a60f7ca14a470fa34156b713fcd5c2
+  '@typescript-eslint/parser': 5.14.0_eslint@7.32.0+typescript@4.5.4
   eslint: 7.32.0
-  eslint-config-airbnb: 19.0.4_0fef5fef66a6389685c4b3dd71accfc8
+  eslint-config-airbnb: 19.0.4_27e04063dc8758fb1c16cb5d4d221177
   eslint-config-next: 12.1.0_2225296a90e9132af0188dad49263ae1
+  eslint-plugin-import: 2.25.4_eslint@7.32.0
+  eslint-plugin-jsx-a11y: 6.5.1_eslint@7.32.0
   eslint-plugin-react: 7.29.3_eslint@7.32.0
+  eslint-plugin-react-hooks: 4.3.0_eslint@7.32.0
   next: 12.1.0_react-dom@17.0.2+react@17.0.2
   next-sanity: 0.5.1_react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  tailwind-scrollbar-hide: 1.1.7
 
 devDependencies:
   '@types/node': 17.0.4
@@ -243,6 +255,27 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
+  /@portabletext/react/1.0.4_react@17.0.2:
+    resolution: {integrity: sha512-IaCt83hJTR1foeD8FsMJmGnBawuD4IAaRQqilTElIgBzdsuW79h14D4REso8xY0Fdt+T+h+W+n/AnAS8QT/ZQQ==}
+    peerDependencies:
+      react: ^17.0.0
+    dependencies:
+      '@portabletext/toolkit': 1.0.5
+      '@portabletext/types': 1.0.3
+      react: 17.0.2
+    dev: false
+
+  /@portabletext/toolkit/1.0.5:
+    resolution: {integrity: sha512-kwVOfVoquufDQNmzzhGxji9A+/T+dhLKKOHEHldM1kMUoNzY6wwrt5H/Plnw4xbdE780kkwqJqHxjxoSYr706A==}
+    dependencies:
+      '@portabletext/types': 1.0.3
+    dev: false
+
+  /@portabletext/types/1.0.3:
+    resolution: {integrity: sha512-SDDsdury2SaTI2D5Ea6o+Y39SSZMYHRMWJHxkxYl3yzFP0n/0EknOhoXcoaV+bxGr2dTTqZi2TOEj+uWYuavSw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
+
   /@rushstack/eslint-patch/1.1.0:
     resolution: {integrity: sha512-JLo+Y592QzIE+q7Dl2pMUtt4q8SKYI5jDrZxrozEQxnGVOyYE+GWK9eLkwTaeN9DDctlaRAQ3TBmzZ1qdLE30A==}
     dev: false
@@ -338,7 +371,7 @@ packages:
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
 
-  /@typescript-eslint/eslint-plugin/5.14.0_eslint@7.32.0+typescript@4.5.4:
+  /@typescript-eslint/eslint-plugin/5.14.0_84a60f7ca14a470fa34156b713fcd5c2:
     resolution: {integrity: sha512-ir0wYI4FfFUDfLcuwKzIH7sMVA+db7WYen47iRSaCGl+HMAZI9fpBwfDo45ZALD3A45ZGyHWDNLhbg8tZrMX4w==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -349,6 +382,7 @@ packages:
       typescript:
         optional: true
     dependencies:
+      '@typescript-eslint/parser': 5.14.0_eslint@7.32.0+typescript@4.5.4
       '@typescript-eslint/scope-manager': 5.14.0
       '@typescript-eslint/type-utils': 5.14.0_eslint@7.32.0+typescript@4.5.4
       '@typescript-eslint/utils': 5.14.0_eslint@7.32.0+typescript@4.5.4
@@ -944,7 +978,7 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /eslint-config-airbnb-base/15.0.0_eslint@7.32.0:
+  /eslint-config-airbnb-base/15.0.0_157002f9dff1b62f2b20650d7e8bf1eb:
     resolution: {integrity: sha512-xaX3z4ZZIcFLvh2oUNvcX5oEofXda7giYmuplVxoOg5A7EXJMrUyqRgR+mhDhPK8LZ4PttFOBvCYDbX3sUoUig==}
     engines: {node: ^10.12.0 || >=12.0.0}
     peerDependencies:
@@ -953,12 +987,13 @@ packages:
     dependencies:
       confusing-browser-globals: 1.0.11
       eslint: 7.32.0
+      eslint-plugin-import: 2.25.4_eslint@7.32.0
       object.assign: 4.1.2
       object.entries: 1.1.5
       semver: 6.3.0
     dev: false
 
-  /eslint-config-airbnb/19.0.4_0fef5fef66a6389685c4b3dd71accfc8:
+  /eslint-config-airbnb/19.0.4_27e04063dc8758fb1c16cb5d4d221177:
     resolution: {integrity: sha512-T75QYQVQX57jiNgpF9r1KegMICE94VYwoFQyMGhrvc+lB8YF2E/M/PYDaQe1AJcWaEgqLE+ErXV1Og/+6Vyzew==}
     engines: {node: ^10.12.0 || ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -969,8 +1004,11 @@ packages:
       eslint-plugin-react-hooks: ^4.3.0
     dependencies:
       eslint: 7.32.0
-      eslint-config-airbnb-base: 15.0.0_eslint@7.32.0
+      eslint-config-airbnb-base: 15.0.0_157002f9dff1b62f2b20650d7e8bf1eb
+      eslint-plugin-import: 2.25.4_eslint@7.32.0
+      eslint-plugin-jsx-a11y: 6.5.1_eslint@7.32.0
       eslint-plugin-react: 7.29.3_eslint@7.32.0
+      eslint-plugin-react-hooks: 4.3.0_eslint@7.32.0
       object.assign: 4.1.2
       object.entries: 1.1.5
     dev: false
@@ -2511,6 +2549,10 @@ packages:
       slice-ansi: 4.0.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
+    dev: false
+
+  /tailwind-scrollbar-hide/1.1.7:
+    resolution: {integrity: sha512-X324n9OtpTmOMqEgDUEA/RgLrNfBF/jwJdctaPZDzB3mppxJk7TLIDmOreEDm1Bq4R9LSPu4Epf8VSdovNU+iA==}
     dev: false
 
   /tailwindcss/3.0.23_autoprefixer@10.4.2:
