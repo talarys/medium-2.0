@@ -1,64 +1,29 @@
 import { GetStaticProps } from 'next';
-import { PortableText } from '@portabletext/react';
-import { disconnect } from 'process';
 import Header from '../../components/Header';
-import { sanityClient, urlFor } from '../../sanity';
-import { Post as PostType } from '../../typings';
+import { sanityClient } from '../../sanity';
+import { PostType } from '../../typings';
 import Footer from '../../components/Footer';
 import Comments from '../../components/Comments';
+import Post from '../../components/Post';
 
 interface Props{
     post: PostType,
 }
 
-function Post({ post }: Props) {
+function PostPage({ post }: Props) {
   return (
     <div className="flex flex-col h-screen">
       <Header />
-      <main>
-        {/* Container */}
-        <div className="w-full lg:w-4/5 lg:mt-4 mx-auto space-y-2 mb-4">
-          {/* Main Image */}
-          <img src={urlFor(post.mainImage).url()!} />
-          {/* Post */}
-          <div className="px-4">
-            {/* Title */}
-            <h1 className="font-bold text-2xl">{post.title}</h1>
-            {/* Author info + date */}
-            <div className="flex items-center space-x-2 mt-4 ">
-              <img className="rounded-full" src={urlFor(post.author.image).width(40)?.url()!} />
-              <p>
-                Blog post by
-                {' '}
-                <span className="text-gray-600">
-                  {post.author.name}
-                </span>
-                {' '}
-                - Published at
-                {' '}
-                {new Date(post._createdAt).toLocaleString()}
-              </p>
-            </div>
-            { /* Description / TLDR */ }
-            <p className=" my-4">
-              TLDR:
-              {' '}
-              {post.description}
-            </p>
-            {/* Main body of article */}
-            <PortableText value={post.body} />
-            <p />
-          </div>
-          {/* Comments */}
-          <Comments />
-        </div>
+      <main className="w-full lg:w-4/5 lg:mt-4 mx-auto space-y-2 mb-4">
+        <Post post={post} />
+        <Comments />
       </main>
       <Footer />
     </div>
   );
 }
 
-export default Post;
+export default PostPage;
 
 export const getStaticPaths = async () => {
   const query = /* groq */ `*[_type == 'post']{
