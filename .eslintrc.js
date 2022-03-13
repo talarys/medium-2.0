@@ -28,5 +28,6 @@ module.exports = {
     'no-underscore-dangle': 'off',
     '@next/next/no-img-element': 'off',
     'jsx-a11y/alt-text': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
   },
 };
