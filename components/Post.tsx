@@ -39,7 +39,6 @@ function Post({ post }:Props) {
         {/* Main body of article */}
         <PortableText value={post.body} />
         <p />
-        {/* Comments */}
       </div>
     </div>
   );
