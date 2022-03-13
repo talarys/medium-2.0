@@ -27,7 +27,6 @@ function Comments() {
           <span>Comment</span>
           <textarea
             className="w-full focus:ring-0 border-gray-400 focus:border-[#ffc017]  shadow-md"
-            type="text"
             rows={8}
           />
         </label>

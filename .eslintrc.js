@@ -29,5 +29,6 @@ module.exports = {
     '@next/next/no-img-element': 'off',
     'jsx-a11y/alt-text': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
 };

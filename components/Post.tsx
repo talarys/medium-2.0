@@ -1,6 +1,7 @@
+// @ts-nocheck
 import { PortableText } from '@portabletext/react';
 import { urlFor } from '../sanity';
-import { PostType } from '../typings';
+import type { PostType } from '../typings';
 
 interface Props{
     post: PostType,

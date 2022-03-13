@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { urlFor } from '../sanity';
-import type { Post } from '../typings';
+import type { PostType } from '../typings';
 
 interface Props{
-  posts:[Post]
+  posts:[PostType]
 }
 
 function Posts({ posts }: Props) {

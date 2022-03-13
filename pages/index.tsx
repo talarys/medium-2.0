@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { sanityClient } from '../sanity';
@@ -5,8 +6,13 @@ import Banner from '../components/Banner';
 import Header from '../components/Header';
 import Posts from '../components/Posts';
 import Footer from '../components/Footer';
+import type { PostType } from '../typings';
 
-const Home: NextPage = ({ posts }) => (
+interface Props{
+  posts:[PostType]
+}
+
+const Home: NextPage = ({ posts }: Props) => (
   <div className="flex flex-col h-screen m-0">
     <Head>
       <title>Medium 2.0</title>
