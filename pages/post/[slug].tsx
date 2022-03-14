@@ -16,7 +16,7 @@ function PostPage({ post }: Props) {
       <Header />
       <main className="w-full lg:w-4/5 lg:mt-4 mx-auto space-y-2 mb-4">
         <Post post={post} />
-        <Comments postId={post._id} />
+        <Comments comments={post.comments} postId={post._id} />
       </main>
       <Footer />
     </div>
@@ -55,6 +55,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       name,
       image
     },
+     'comments':*[
+      _type=='comment' 
+      && post._ref==^._id
+      && approved==true
+    ],
     description,
     mainImage,
     slug,
