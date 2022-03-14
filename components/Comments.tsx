@@ -14,8 +14,8 @@ function Comments({ postId }) {
     formState: { errors },
   } = useForm<IFormarInput>();
 
-  const onSubmit: SubmitHandler<IFormarInput> = async (data) => {
-    await fetch('/api/createComment', {
+  const onSubmit: SubmitHandler<IFormarInput> = (data) => {
+    fetch('/api/createComment', {
       method: 'POST',
       body: JSON.stringify(data),
     })
