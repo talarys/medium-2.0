@@ -16,7 +16,7 @@ const Home: NextPage = ({ posts }: Props) => (
   <div className="flex flex-col h-screen m-0">
     <Head>
       <title>Medium 2.0</title>
-      <link rel="icon" href="/Medium.svg" />
+      <link rel="icon" href="/MediumIcon.svg" />
     </Head>
     <Header />
     <Banner />
