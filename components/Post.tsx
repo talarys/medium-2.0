@@ -13,7 +13,7 @@ function Post({ post }:Props) {
       {/* Main Image */}
       <img src={urlFor(post.mainImage).url()!} />
       {/* Post */}
-      <div className="px-4">
+      <div className="px-4 pt-4">
         {/* Title */}
         <h1 className="font-bold text-2xl">{post.title}</h1>
         {/* Author info + date */}
