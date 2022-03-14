@@ -1,4 +1,6 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface IFormarInput{
   _id:string;
@@ -11,6 +13,7 @@ function Comments({ postId }) {
   const {
     register,
     handleSubmit,
+    resetField,
     formState: { errors },
   } = useForm<IFormarInput>();
 
@@ -19,8 +22,15 @@ function Comments({ postId }) {
       method: 'POST',
       body: JSON.stringify(data),
     })
-      .then((d) => console.log(d))
-      .catch((err) => console.error(err));
+      .then(() => {
+        toast.success('Comment submited succesfully');
+        resetField('name');
+        resetField('email');
+        resetField('comment');
+      })
+      .catch((err) => {
+        toast.success('Something went wrong', err);
+      });
   };
 
   return (
@@ -77,10 +87,17 @@ function Comments({ postId }) {
           )}
         </div>
         <input
+          value="Submit comment"
           type="submit"
           className="shadow hover:bg-yellow-400 bg-[#ffc017] w-full cursor-pointer text-white text-bold px-4 py-2 rounded"
         />
       </form>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        closeOnClick
+        pauseOnHover
+      />
     </div>
   );
 }
