@@ -16,7 +16,7 @@ function PostPage({ post }: Props) {
       <Header />
       <main className="w-full lg:w-4/5 lg:mt-4 mx-auto space-y-2 mb-4">
         <Post post={post} />
-        <Comments />
+        <Comments postId={post._id} />
       </main>
       <Footer />
     </div>
