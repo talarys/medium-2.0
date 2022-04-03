@@ -14,7 +14,7 @@ function PostPage({ post }: Props) {
   return (
     <div className="flex flex-col h-screen">
       <Header />
-      <main className="w-full lg:w-4/5 lg:mt-4 mx-auto space-y-2 mb-4">
+      <main className="max-w-[1500px] lg:w-4/5 lg:mt-4 mx-auto space-y-2 mb-4">
         <Post post={post} />
         <Comments comments={post.comments} postId={post._id} />
       </main>

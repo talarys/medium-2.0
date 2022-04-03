@@ -9,7 +9,7 @@ interface Props{
 
 function Post({ post }:Props) {
   return (
-    <div>
+    <div className="flex flex-col">
       {/* Main Image */}
       <img src={urlFor(post.mainImage).url()!} />
       {/* Post */}

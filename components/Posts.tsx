@@ -8,7 +8,7 @@ interface Props{
 
 function Posts({ posts }: Props) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-5 cursor-pointer">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-5 cursor-pointer max-w-[1500px] mx-auto">
       {posts.map((post) => (
         <Link key={post._id} href={`/post/${post.slug.current}`} passHref>
           {/* Post  */}
