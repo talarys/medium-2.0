@@ -14,7 +14,7 @@ function Posts({ posts }: Props) {
           {/* Post  */}
           <div className="shadow-md overflow-hidden border rounded-lg group">
             <img
-              className="group-hover:scale-105 transition ease-in-out"
+              className="group-hover:scale-105 transition ease-in-out w-full"
               src={urlFor(post.mainImage).url()!}
             />
             <div className="flex space-y-2 bg-white justify-between p-2">
